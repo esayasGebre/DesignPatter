@@ -1,4 +1,4 @@
-package observerpattern_in_stock;
+package observerpatterns_in_stock;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -8,19 +8,19 @@ import java.util.Map.Entry;
  * @author ESAYAS GO.
  *
  */
-public class StockBuyer implements Observer {
+public class StockViewer implements Observer {
 
-	   StockBuyer(Subject stockBuyer){
-	       	stockBuyer.register(this);
-	    }
+	StockViewer(Subject stockViewer){
+		stockViewer.register(this);
+	}
 
 	@Override
 	public void update(Map<String, Double> stocklist) {
-		System.out.println("StockBuyer: stocklist is changed:");
+		System.out.println("StockViewer: stocklist is changed:");
 		for (Entry<String, Double> entry : stocklist.entrySet()) {
 			String key = entry.getKey();
 			Double value = entry.getValue();
-			System.out.println(key + " - $" + value);
+			System.out.println("StockViewer" + key + " - $" + value);
 		}
 	}
 }

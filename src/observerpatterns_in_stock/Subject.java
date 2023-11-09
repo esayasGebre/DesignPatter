@@ -1,4 +1,4 @@
-package observerpattern_in_stock;
+package observerpatterns_in_stock;
 /**
  *
  * @author ESAYAS GO.
